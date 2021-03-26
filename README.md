@@ -1,8 +1,6 @@
+
 # xaringan-template
 
-<!-- badges: start -->
-<!-- badges: end -->
+This is a repository template for `xaringan` slides.
 
-This is the work-in-progress repo for a template using `xaringan`.
-
-* [DEMO](https://umr1283.github.io/xaringan-template/)
+<a href="thumbs/title_slide.png"><img alt="Title Slide" src="thumbs/title_slide_thumb.png" width="384" height="216"></a>

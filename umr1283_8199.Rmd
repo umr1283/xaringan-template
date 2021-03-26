@@ -5,6 +5,8 @@ author: "Firstname Lastname"
 institute: "_Inserm U1283 / CNRS UMR8199 / Institut Pasteur de Lille / Université de Lille_"
 date: '`r  format(Sys.Date(), "%B %d, %Y")`'
 knit: (function(inputFile, encoding) rmarkdown::render(inputFile, encoding = encoding, output_file = "docs/index.html"))
+params:
+  content: ['Rmd/content.Rmd']
 output:
   xaringan::moon_reader:
     self_contained: true
@@ -36,7 +38,6 @@ suppressPackageStartupMessages({
 ```
 
 ```{r setup-knitr, include = FALSE}
-### knitr settings =================================================================================
 opts_chunk$set(
   eval = TRUE, # Default: TRUE
   include = TRUE, # Default: TRUE
@@ -52,7 +53,6 @@ opts_chunk$set(
 ```
 
 ```{r setup-ggplot2, include = FALSE}
-### Tables and Figures Theme =======================================================================
 theme_umr <- function(
   base_size = 11,
   base_family = "",
@@ -229,40 +229,8 @@ options(
 )
 ```
 
-# Introduction
-
-## Subtitle
-
-`some code` and some text.  
-A URL [www.good.cnrs.fr](https://www.good.cnrs.fr/).
-
-```{r, echo = TRUE}
-1 + 1
+```{r, child = params[["content"]]}
 ```
-
-```{r, echo = TRUE}
-x <- 1
-y <- x + 1 #<<
-y
-```
-
----
-
-# GGPLOT2 With `code`
-
-```{r, echo = FALSE}
-ggplot(mtcars, aes(wt, mpg)) + geom_point(colour = theme_get()$line$colour) + labs(title = "GGPLOT2")
-```
-
----
-class: part-slide
-
-# PART 1 With `code`
-
-
-<!-- ================================================================================ -->
-<!-- ================================== Last Slide ================================== -->
-<!-- ================================================================================ -->
 
 ---
 class: part-slide
