@@ -11,6 +11,8 @@ output:
   xaringan::moon_reader:
     self_contained: true
     css: [css/umr1283_8199.css]
+    includes:
+      in_header: css/_favicon.html
     nature:
       highlightStyle: github
       highlightLines: true
