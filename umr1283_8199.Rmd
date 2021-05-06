@@ -6,13 +6,13 @@ institute: "_Inserm U1283 / CNRS UMR8199 / Institut Pasteur de Lille / Universit
 date: '`r  format(Sys.Date(), "%B %d, %Y")`'
 knit: (function(inputFile, encoding) rmarkdown::render(inputFile, encoding = encoding, output_file = "docs/index.html"))
 params:
-  content: ['Rmd/content.Rmd']
+  content: ['content/content.Rmd']
 output:
   xaringan::moon_reader:
     self_contained: true
-    css: [css/umr1283_8199.css]
+    css: [assets/umr1283_8199.css]
     includes:
-      in_header: css/_favicon.html
+      in_header: assets/_favicon.html
     nature:
       highlightStyle: github
       highlightLines: true
