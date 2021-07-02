@@ -14,7 +14,7 @@ output:
     self_contained: true
     css: [assets/umr1283_8199.css]
     includes:
-      in_header: assets/_favicon.html
+      in_header: assets/_scripts.html
     nature:
       highlightStyle: github
       highlightLines: true

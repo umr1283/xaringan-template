@@ -17,6 +17,38 @@ y
 
 ---
 
+# New slide with a panels
+
+.panelset[
+
+.panel[.panel-name[R Code]
+
+```{r, eval = FALSE}
+head(iris, 10)
+```
+
+]
+
+.panel[.panel-name[Table]
+
+```{r, echo = FALSE}
+kable(head(iris, 10))
+```
+
+]
+
+.panel[.panel-name[Plot]
+
+```{r, echo = FALSE}
+plot(iris[[1]], iris[[2]])
+```
+
+]
+
+]
+
+---
+
 # GGPLOT2 With `code`
 
 ```{r, echo = FALSE}

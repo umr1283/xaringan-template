@@ -224,7 +224,7 @@ blockquote {
 }
 
 .remark-slide table thead th {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--bg-colour);
 }
 th, td {
   padding: 5px;
