@@ -7,10 +7,12 @@
 @import url("https://use.fontawesome.com/releases/v5.12.1/css/all.css");
 
 /* @import url(https://fonts.googleapis.com/css?family=Corbel:300,300i,400,400i,500,500i,700,700i); */
-@import url(https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/fira_code.css);
+/* @import url(https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/fira_code.css); */
+@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@5.2/distr/fira_code.css);
 
 body {
-  font-family: 'Corbel', 'Droid Serif', 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC', serif;
+  font-family: 'Verdana', 'Corbel', 'Droid Serif', 'Palatino Linotype', 'Book Antiqua', 'Palatino', 'Microsoft YaHei', 'Songti SC', serif;
+  font-size: 18px;
 }
 
 .remark-code, .remark-inline-code {
@@ -78,7 +80,7 @@ a:hover {
 .remark-slide-content {
   background-color: var(--bg-colour);
   border-top: 80px solid var(--font-colour);
-  font-size: 20px;
+  font-size: 100%;
   font-weight: 300;
   line-height: 1.5;
   padding: 1em 2em 1em 2em
@@ -297,7 +299,7 @@ hr, .title-slide h2::after, .mline h1::after {
 }
 
 .remark-slide-content h1 {
-  font-size: 45px;
+  font-size: 40px;
 }
 
 .remark-slide-content h2 {
@@ -305,7 +307,7 @@ hr, .title-slide h2::after, .mline h1::after {
 }
 
 .remark-slide-content h3 {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .mline h1::after {
