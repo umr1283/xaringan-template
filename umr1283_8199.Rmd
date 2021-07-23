@@ -12,6 +12,7 @@ params:
 output:
   xaringan::moon_reader:
     self_contained: true
+    mathjax: null
     css: [assets/umr1283_8199.css]
     includes:
       in_header: assets/_scripts.html
