@@ -39,7 +39,8 @@ suppressPackageStartupMessages({
   library(gt)
   library(scales)
   
-  # library(targets)
+  library(targets)
+  library(katex)
 })
 ```
 
@@ -65,6 +66,28 @@ opts_chunk$set(
 ```
 
 ```{r setup-gt, code = source(here("assets/setup-gt.R")), include = FALSE}
+```
+
+```{r functions}
+sub_chunk <- function(code, chunk_name = NULL, fig_width = 11.5, fig_height = 5.75) {
+  sub_chunk_txt <- paste0(
+    "\n```{r ", chunk_name, ", fig.width = ", fig_width, ", fig.height = ", fig_height, ", echo = FALSE}\n",
+    "(", paste0(deparse(function() code), collapse = ""), ")()",
+    "\n```\n\n"
+  )
+  cat(
+    "\n\n",
+    knitr::knit(text = knitr::knit_expand(text = sub_chunk_txt), quiet = TRUE),
+    "\n\n", 
+    sep = ""
+  )
+}
+
+eq <- function(tex, ...) katex::katex_html(tex = tex, ..., output = "html")
+```
+
+```{r tar-read}
+# x <- tar_read(x)
 ```
 
 ```{r, child = params[["content"]]}
