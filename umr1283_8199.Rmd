@@ -13,7 +13,7 @@ output:
   xaringan::moon_reader:
     self_contained: true
     mathjax: null
-    css: [assets/umr1283_8199.css]
+    css: [assets/umr1283_8199.css, https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css]
     includes:
       in_header: assets/_scripts.html
     nature:
@@ -69,7 +69,7 @@ opts_chunk$set(
 ```{r setup-gt, code = source(here("assets/setup-gt.R")), include = FALSE}
 ```
 
-```{r functions}
+```{r functions, include = FALSE}
 sub_chunk <- function(code, chunk_name = NULL, fig_width = 11.5, fig_height = 5.75) {
   sub_chunk_txt <- paste0(
     "\n```{r ", chunk_name, ", fig.width = ", fig_width, ", fig.height = ", fig_height, ", echo = FALSE}\n",
@@ -84,10 +84,10 @@ sub_chunk <- function(code, chunk_name = NULL, fig_width = 11.5, fig_height = 5.
   )
 }
 
-eq <- function(tex, ...) katex::katex_html(tex = tex, ..., output = "html")
+eq <- function(tex, d = FALSE, ...) katex::katex_html(tex = tex, displayMode = d, ..., output = "html")
 ```
 
-```{r tar-read}
+```{r tar-read, include = FALSE}
 # x <- tar_read(x)
 ```
 
