@@ -32,13 +32,19 @@ options(htmltools.dir.version = FALSE)
 suppressPackageStartupMessages({
   library(here)
   library(knitr)
+
+  library(data.table)
+  
   # library(ragg)
+  library(svglite)
+  library(showtext)
+  
   library(ggplot2)
   library(ggtext)
   library(patchwork)
-  library(data.table)
-  library(gt)
   library(scales)
+  
+  library(gt)
   
   library(targets)
   library(katex)
